@@ -19,7 +19,7 @@
                 <a href="#home" class="nav-link">Главная</a>
                 <a href="#countries" class="nav-link">Страны</a>
                 <a href="#messenger" class="nav-link">Мессенджер</a>
-                <button id="auth-btn" class="auth-btn">Войти</button>
+                <button id="auth-btn" class="auth-btn" onclick="showAuthModal()">Войти</button>
             </div>
         </div>
     </nav>
@@ -213,6 +213,13 @@
         // Глобальная функция для открытия видео
         function openVideo(url) {
             window.open(url, '_blank');
+        }
+        
+        // Глобальная функция для прокрутки к странам
+        function scrollToCountries() {
+            document.getElementById('countries').scrollIntoView({ 
+                behavior: 'smooth' 
+            });
         }
         
         // Глобальная функция для показа модального окна
